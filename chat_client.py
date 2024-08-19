@@ -13,6 +13,7 @@ def recieve_message():
 
         if data.decode('utf-8') == "timeout":
             print("タイムアウトしました")
+            client_socket.close()
             os._exit(0)
             break
         
